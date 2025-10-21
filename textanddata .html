@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shashi & Deeksha's Engagement</title>
+  <title>Shashi & Deeksha's Wedding</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
         
     :root {
         --deep-red: #800020;
-        --gold: #D4AF37;
+        --rose-gold: #D4A5A5;
+        --dark-rose: #A05D67;
+        --light-rose: #F4E4E6;
         --maroon: #800000;
         --cream: #FFF8DC;
-        --dark-gold: #996515;
         --burgundy: #6B0F1A;
-        --light-gold: #FFE5B4;
+        --soft-pink: #E8B4B8;
     }
 
     body {
       margin: 0;
       padding: 40px;
       min-height: 100vh;
-      background: url('background.jpg') center/cover no-repeat fixed;
+      background: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920') center/cover no-repeat fixed;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -29,59 +30,75 @@
 
     .invitation-card {
         max-width: 850px;
-        background: rgba(255, 255, 255, 0.95);
+        background: transparent;
         padding: 60px;
         position: relative;
         border-radius: 8px;
         box-shadow: 
-            0 0 0 1px var(--gold),
-            0 0 0 15px rgba(255, 250, 240, 0.9),
-            0 0 0 16px var(--gold),
-            0 20px 60px rgba(0,0,0,0.2);
+            0 0 0 1px var(--rose-gold),
+            0 0 0 15px rgba(244, 228, 230, 0.1),
+            0 0 0 16px var(--rose-gold),
+            0 20px 60px rgba(0,0,0,0.3);
     }
 
     .inner-content {
         position: relative;
         z-index: 1;
         padding: 40px;
-        border: 2px solid var(--gold);
-        background: rgba(255, 255, 255, 0.8);
+        border: 2px solid var(--rose-gold);
+        background: transparent;
         box-shadow: 
-            0 0 40px rgba(212, 175, 55, 0.1) inset,
-            0 0 0 1px rgba(212, 175, 55, 0.2);
+            0 0 40px rgba(212, 165, 165, 0.2) inset,
+            0 0 0 1px rgba(212, 165, 165, 0.3);
         border-radius: 8px;
     }
 
     .header {
         font-family: 'Dancing Script', cursive;
         font-size: 52px;
-        background: linear-gradient(45deg, var(--burgundy), var(--deep-red));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--rose-gold);
         text-align: center;
         margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        margin-top: 20px;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
     }
 
     .subheader {
         font-family: 'Cormorant Garamond', serif;
         font-size: 24px;
-        color: var(--burgundy);
+        color: var(--cream);
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         line-height: 1.8;
         letter-spacing: 0.5px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .family-names {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 22px;
+        color: var(--light-rose);
+        text-align: center;
+        margin: 25px 0;
+        line-height: 1.6;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .family-names strong {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--rose-gold);
     }
 
     .names {
         font-family: 'Playfair Display', serif;
         font-size: 44px;
-        background: linear-gradient(45deg, var(--deep-red), var(--burgundy));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--rose-gold);
         text-align: center;
         margin: 20px 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
     }
 
     .decorative-line {
@@ -89,9 +106,9 @@
         background: linear-gradient(
             to right,
             transparent,
-            var(--gold),
-            var(--dark-gold),
-            var(--gold),
+            var(--rose-gold),
+            var(--dark-rose),
+            var(--rose-gold),
             transparent
         );
         margin: 30px auto;
@@ -99,88 +116,140 @@
         position: relative;
     }
 
-    .date-venue {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 24px;
-        color: var(--burgundy);
-        text-align: center;
+    .decorative-line::before,
+    .decorative-line::after {
+        content: '❀';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--rose-gold);
+        font-size: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .decorative-line::before {
+        left: -30px;
+    }
+
+    .decorative-line::after {
+        right: -30px;
+    }
+
+    .events-section {
         margin: 40px 0;
-        line-height: 1.8;
-    }
-
-    .date {
-        font-size: 30px;
-        background: linear-gradient(45deg, var(--deep-red), var(--burgundy));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 600;
-        margin: 20px 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-
-    .location-section {
-        margin-top: 40px;
         padding: 30px;
-        border: 1px solid var(--gold);
-        background: rgba(255, 255, 255, 0.9);
-        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+        border: 2px solid var(--rose-gold);
         border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        backdrop-filter: blur(10px);
     }
 
-    .qr-section {
+    .event-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        color: var(--rose-gold);
         text-align: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     }
 
-    .qr-title {
+    .event-item {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 25px;
+        margin: 20px 0;
+        border-left: 4px solid var(--rose-gold);
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        backdrop-filter: blur(5px);
+    }
+
+    .event-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        color: var(--rose-gold);
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .event-details {
         font-family: 'Cormorant Garamond', serif;
         font-size: 20px;
-        color: var(--burgundy);
-        margin-bottom: 15px;
-        font-weight: 600;
+        color: var(--cream);
+        line-height: 1.8;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     }
 
-    .qr-code {
-        display: inline-block;
-        background: white;
+    .event-time {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--light-rose);
+        margin: 10px 0;
+    }
+
+    .event-venue {
+        font-size: 19px;
+        color: var(--light-rose);
+        margin: 15px 0;
         padding: 15px;
-        border: 2px solid var(--gold);
-        margin: 20px 0;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .event-venue strong {
+        color: var(--rose-gold);
+        font-size: 20px;
     }
 
     .directions-btn {
         display: inline-block;
-        padding: 12px 25px;
-        background: linear-gradient(45deg, var(--burgundy), var(--deep-red));
+        padding: 10px 20px;
+        background: linear-gradient(45deg, var(--dark-rose), var(--rose-gold));
         color: white;
         text-decoration: none;
         border-radius: 25px;
         font-family: 'Cormorant Garamond', serif;
-        font-size: 18px;
-        margin-top: 20px;
+        font-size: 16px;
+        margin-top: 15px;
         transition: all 0.3s ease;
-        border: 1px solid var(--gold);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border: 1px solid var(--rose-gold);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     .directions-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        background: linear-gradient(45deg, var(--deep-red), var(--burgundy));
+        box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        background: linear-gradient(45deg, var(--rose-gold), var(--soft-pink));
     }
 
     .blessing-text {
         font-family: 'Cormorant Garamond', serif;
         font-size: 24px;
-        color: var(--burgundy);
+        color: var(--cream);
         text-align: center;
         font-style: italic;
         margin-top: 40px;
         line-height: 1.6;
         letter-spacing: 0.5px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    }
+
+    .wedding-quote {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        color: var(--rose-gold);
+        text-align: center;
+        font-style: italic;
+        margin: 30px 0;
+        padding: 20px;
+        border-left: 3px solid var(--rose-gold);
+        border-right: 3px solid var(--rose-gold);
+        background: rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        backdrop-filter: blur(5px);
     }
 
     @media (max-width: 768px) {
@@ -189,56 +258,113 @@
         .inner-content { padding: 20px; }
         .header { font-size: 42px; }
         .names { font-size: 36px; }
-        .date { font-size: 26px; }
-        .qr-title { font-size: 18px; }
-        .directions-btn { font-size: 16px; padding: 10px 20px; }
+        .event-name { font-size: 22px; }
+        .event-details { font-size: 18px; }
+        .event-venue { font-size: 17px; }
+        .family-names { font-size: 19px; }
+        .wedding-quote { font-size: 18px; padding: 15px; }
+        .event-item { padding: 20px; }
+        .directions-btn { font-size: 14px; padding: 8px 16px; }
     }
   </style>
 </head>
 <body>
     <div class="invitation-card">
         <div class="inner-content">
-            <div class="header">Karola's Invitation</div>
+            
+            <div class="header">Wedding Celebration</div>
             
             <div class="subheader">
-                You're Invited!<br><br>
-                With great joy and heartfelt happiness,<br>
-                we cordially invite you to the Engagement Ceremony of
+                With the blessings of Lord Ganesha<br>
+                and the grace of our families,<br>
+                we joyfully invite you to the Wedding Ceremony of
+            </div>
+
+            <!-- Family Names Section -->
+            <div class="family-names">
+                <strong>Son of</strong><br>
+                Karola Srinivas & Bhagya Laxmi
             </div>
 
             <div class="decorative-line"></div>
             
             <div class="names">Shashi Kumar</div>
-            <div style="font-size: 36px; color: var(--gold); text-align: center;">&</div>
+            <div style="font-size: 36px; color: var(--rose-gold); text-align: center; text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">&</div>
             <div class="names">Deeksha</div>
 
             <div class="decorative-line"></div>
 
-            <div class="date-venue">
-                <div class="date">27th July 2025 | 7:00 PM</div>
-                <div>
-                    M.A. Garden Function Hall<br>
-                    Opposite Apollo Hospital, Hyderguda<br>
-                    Basheerbagh, Hyderabad
-                </div>
+            <!-- Family Names Section -->
+            <div class="family-names">
+                <strong>Daughter of</strong><br>
+                Salandri Niranjan Yadav & Sandhya
             </div>
 
-            <div class="location-section">
-                <div class="qr-section">
-                    <div class="qr-title">Venue Location QR Code</div>
-                    <div class="qr-code">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.app.goo.gl/3dfZnqNoSXF1RvEh7" 
-                             alt="Venue Location QR Code" 
-                             style="width: 120px; height: 120px;">
+            <div class="wedding-quote">
+                "Two souls with but a single thought,<br>
+                Two hearts that beat as one"
+            </div>
+
+            <!-- Multiple Events Section -->
+            <div class="events-section">
+                <div class="event-title">Wedding Events</div>
+                
+                <!-- Wedding Ceremony -->
+                <div class="event-item">
+                    <div class="event-name">
+                        Wedding Ceremony
                     </div>
-                    <a href="https://maps.app.goo.gl/3dfZnqNoSXF1RvEh7" target="_blank" class="directions-btn">
-                        Get Directions <span class="arrow">→</span>
-                    </a>
+                    <div class="event-details">
+                        <div class="event-time">Sunday, 26th October 2025</div>
+                        <div class="event-time">11:20 AM onwards</div>
+                        <div style="margin-top: 10px; font-style: italic;">
+                            Muhurat Time: 11:20 AM
+                        </div>
+                        
+                        <div class="event-venue">
+                            <strong>📍 Venue</strong><br>
+                            M.A. Garden Function Hall<br>
+                            Opposite Apollo Hospital, Hyderguda<br>
+                            Basheerbagh, Hyderabad
+                        </div>
+                        
+                        <a href="https://maps.app.goo.gl/3dfZnqNoSXF1RvEh7" target="_blank" class="directions-btn">
+                            Get Directions 🗺️
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reception -->
+                <div class="event-item">
+                    <div class="event-name">
+                        Reception Ceremony
+                    </div>
+                    <div class="event-details">
+                        <div class="event-time">Tuesday, 28th October 2025</div>
+                        <div class="event-time">8:00 PM onwards</div>
+                        <div style="margin-top: 10px; font-style: italic;">
+                            Dinner & Celebrations
+                        </div>
+                        
+                        <div class="event-venue">
+                            <strong>📍 Venue</strong><br>
+                            Grand Celebration Banquet<br>
+                            Road No. 10, Banjara Hills<br>
+                            Hyderabad
+                        </div>
+                        
+                        <a href="https://maps.app.goo.gl/YourReceptionVenueLink" target="_blank" class="directions-btn">
+                            Get Directions 🗺️
+                        </a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Blessing Text -->
             <div class="blessing-text">
-                We seek your gracious presence and blessings on this auspicious occasion
+                Your presence will make our day more special.<br>
+                We seek your gracious presence and blessings<br>
+                as we begin this beautiful journey of love and togetherness.
             </div>
         </div>
     </div>
