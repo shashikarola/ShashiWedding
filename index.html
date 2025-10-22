@@ -7,20 +7,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#B76E79">
+  <meta name="theme-color" content="#8B4F5C">
   <title>Shashi & Deeksha's Wedding</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Dancing+Script:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
         
     :root {
-        /* Rose Gold / Blush Pink Theme */
-        --primary-color: #B76E79;
-        --dark-accent: #8B4F5C;
-        --light-accent: #E8B4BC;
+        /* Darker Rose Gold / Blush Pink Theme */
+        --primary-color: #8B4F5C; /* Darker rose gold */
+        --dark-accent: #6D3F47;
+        --light-accent: #B76E79;
         --cream: #FFF8F0;
         --soft-cream: #FFFEFA;
         --champagne: #F4D6D9;
-        --deep-accent: #6D3F47;
+        --deep-accent: #5A3339;
         
         /* Darker text colors */
         --dark-text: #2C2C2C;
@@ -39,7 +39,6 @@
         height: 100%;
         height: -webkit-fill-available;
         overflow-x: hidden;
-        /* Force GPU acceleration */
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
@@ -51,20 +50,16 @@
       min-height: -webkit-fill-available;
       width: 100%;
       overflow-x: hidden;
-      
-      /* Background setup for all devices */
       position: relative;
-      
       display: flex;
       align-items: flex-start;
       justify-content: center;
       -webkit-font-smoothing: subpixel-antialiased;
       -moz-osx-font-smoothing: auto;
-      
       max-width: 100vw;
     }
 
-    /* Background image layer - works on all devices */
+    /* Background image layer */
     body::before {
       content: '';
       position: fixed;
@@ -74,16 +69,15 @@
       height: 100%;
       background-image: url('background.jpg');
       background-position: center top;
-      background-size: 100% 100%; /* Stretch to fill */
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       z-index: -1;
-      /* Force GPU acceleration for smooth rendering */
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
       will-change: transform;
     }
 
-    /* Mobile devices - Android & iOS */
+    /* Mobile devices */
     @media (max-width: 768px) {
       html, body {
         height: 100%;
@@ -92,7 +86,7 @@
       }
 
       body::before {
-        position: absolute; /* Changed from fixed for better mobile support */
+        position: absolute;
         min-height: 100vh;
         min-height: -webkit-fill-available;
       }
@@ -118,10 +112,11 @@
 
     .header {
         font-family: 'Dancing Script', cursive;
-        font-size: clamp(28px, 6vw, 40px);
+        font-size: clamp(22px, 5vw, 32px); /* Reduced from 28px-40px */
+        font-weight: 400; /* Thinner */
         color: var(--primary-color);
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         margin-top: 10px;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         word-wrap: break-word;
@@ -129,45 +124,48 @@
 
     .subheader {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(18px, 4vw, 24px);
+        font-size: clamp(15px, 3.5vw, 19px); /* Reduced from 18px-24px */
+        font-weight: 300; /* Thinner */
         color: var(--dark-text);
         text-align: center;
-        margin-bottom: 25px;
-        line-height: 1.8;
-        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        letter-spacing: 0.3px;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         word-wrap: break-word;
     }
 
     .family-names {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(18px, 3.5vw, 22px);
+        font-size: clamp(15px, 3vw, 18px); /* Reduced from 18px-22px */
+        font-weight: 300; /* Thinner */
         color: var(--medium-text);
         text-align: center;
-        margin: 20px 0;
+        margin: 18px 0;
         line-height: 1.6;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         word-wrap: break-word;
     }
 
     .family-names strong {
-        font-size: clamp(20px, 4vw, 24px);
-        font-weight: 600;
+        font-size: clamp(16px, 3.5vw, 20px); /* Reduced from 20px-24px */
+        font-weight: 500; /* Thinner */
         color: var(--primary-color);
     }
 
     .names {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(32px, 7vw, 44px);
+        font-size: clamp(26px, 6vw, 36px); /* Reduced from 32px-44px */
+        font-weight: 400; /* Thinner */
         color: var(--primary-color);
         text-align: center;
-        margin: 15px 0;
+        margin: 12px 0;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         word-wrap: break-word;
     }
 
     .decorative-line {
-        height: 2px;
+        height: 1.5px; /* Thinner from 2px */
         background: linear-gradient(
             to right,
             transparent,
@@ -176,8 +174,8 @@
             var(--primary-color),
             transparent
         );
-        margin: 25px auto;
-        width: min(250px, 80%);
+        margin: 20px auto;
+        width: min(220px, 75%);
         position: relative;
     }
 
@@ -188,7 +186,7 @@
         top: 50%;
         transform: translateY(-50%);
         color: var(--primary-color);
-        font-size: 18px;
+        font-size: 16px; /* Smaller */
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
@@ -201,7 +199,7 @@
     }
 
     .events-section {
-        margin-top: 100px; /* Added extra spacing - moved down 5 spaces */
+        margin-top: 100px;
         margin-bottom: 30px;
         padding: 20px 5px;
         background: transparent;
@@ -210,28 +208,28 @@
 
     .event-title {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(22px, 5vw, 28px);
+        font-size: clamp(19px, 4.5vw, 24px); /* Reduced from 22px-28px */
+        font-weight: 500; /* Thinner */
         color: var(--primary-color);
         text-align: center;
-        margin-bottom: 25px;
-        font-weight: 600;
+        margin-bottom: 20px;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .event-item {
         background: transparent;
-        padding: 20px 10px;
-        margin: 20px 0;
-        border-left: 4px solid var(--primary-color);
+        padding: 18px 10px;
+        margin: 18px 0;
+        border-left: 3px solid var(--primary-color); /* Thinner from 4px */
         border-radius: 5px;
     }
 
     .event-name {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(20px, 4.5vw, 26px);
+        font-size: clamp(17px, 4vw, 22px); /* Reduced from 20px-26px */
+        font-weight: 500; /* Thinner */
         color: var(--primary-color);
-        font-weight: 600;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         text-align: center;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
@@ -239,31 +237,33 @@
     .event-content {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
         align-items: center;
     }
 
     .event-details {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(17px, 3.5vw, 20px);
+        font-size: clamp(14px, 3vw, 17px); /* Reduced from 17px-20px */
+        font-weight: 300; /* Thinner */
         color: var(--dark-text);
-        line-height: 1.8;
+        line-height: 1.7;
         text-align: center;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         width: 100%;
     }
 
     .event-time {
-        font-size: clamp(18px, 4vw, 22px);
-        font-weight: 600;
+        font-size: clamp(15px, 3.5vw, 18px); /* Reduced from 18px-22px */
+        font-weight: 500; /* Thinner */
         color: var(--medium-text);
-        margin: 8px 0;
+        margin: 6px 0;
     }
 
     .event-venue {
-        font-size: clamp(16px, 3.5vw, 19px);
+        font-size: clamp(14px, 3vw, 16px); /* Reduced from 16px-19px */
+        font-weight: 300; /* Thinner */
         color: var(--medium-text);
-        padding: 15px;
+        padding: 12px;
         background: transparent;
         border-radius: 5px;
         text-align: center;
@@ -273,21 +273,23 @@
 
     .event-venue strong {
         color: var(--primary-color);
-        font-size: clamp(18px, 4vw, 20px);
+        font-size: clamp(15px, 3.5vw, 17px); /* Reduced from 18px-20px */
+        font-weight: 500; /* Thinner */
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .directions-btn {
         display: inline-block;
-        padding: 12px 24px;
+        padding: 10px 20px; /* Slightly smaller */
         background: linear-gradient(45deg, var(--dark-accent), var(--primary-color));
         color: white;
         text-decoration: none;
         border-radius: 25px;
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(14px, 3.5vw, 16px);
-        margin-top: 15px;
+        font-size: clamp(13px, 3vw, 15px); /* Reduced from 14px-16px */
+        font-weight: 400; /* Thinner */
+        margin-top: 12px;
         transition: all 0.3s ease;
         border: 1px solid var(--primary-color);
         box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -306,11 +308,12 @@
     /* With Blessings From Section */
     .blessings-from {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(17px, 3.5vw, 20px);
+        font-size: clamp(14px, 3vw, 17px); /* Reduced from 17px-20px */
+        font-weight: 300; /* Thinner */
         color: var(--medium-text);
         text-align: center;
-        margin: 25px 0;
-        line-height: 1.8;
+        margin: 20px 0;
+        line-height: 1.7;
         padding: 0 15px;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         word-wrap: break-word;
@@ -318,20 +321,22 @@
 
     .blessings-from strong {
         color: var(--primary-color);
-        font-size: clamp(19px, 4vw, 22px);
+        font-size: clamp(16px, 3.5vw, 19px); /* Reduced from 19px-22px */
+        font-weight: 500; /* Thinner */
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .blessing-text {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(18px, 4vw, 24px);
+        font-size: clamp(15px, 3.5vw, 19px); /* Reduced from 18px-24px */
+        font-weight: 300; /* Thinner */
         color: var(--dark-text);
         text-align: center;
         font-style: italic;
-        margin-top: 20px;
+        margin-top: 18px;
         line-height: 1.6;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         padding: 0 15px;
         word-wrap: break-word;
@@ -340,7 +345,7 @@
     /* Desktop specific styles */
     @media (min-width: 769px) {
         body::before {
-            position: fixed; /* Fixed on desktop */
+            position: fixed;
         }
 
         .invitation-card {
@@ -395,16 +400,16 @@
 
         .decorative-line::before {
             left: -20px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .decorative-line::after {
             right: -20px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .events-section {
-            margin-top: 60px; /* Less spacing on mobile */
+            margin-top: 60px;
         }
     }
 
@@ -421,7 +426,7 @@
         }
 
         .events-section {
-            margin-top: 40px; /* Less spacing in landscape */
+            margin-top: 40px;
         }
     }
 
@@ -491,7 +496,7 @@
             <div class="decorative-line"></div>
             
             <div class="names">Shashi Kumar</div>
-            <div style="font-size: clamp(28px, 6vw, 36px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">&</div>
+            <div style="font-size: clamp(22px, 5vw, 30px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 400;">&</div>
             <div class="names">Deeksha</div>
 
             <div class="decorative-line"></div>
@@ -512,7 +517,7 @@
                         <div class="event-details">
                             <div class="event-time">Sunday, 26th October 2025</div>
                             <div class="event-time">11:20 AM onwards</div>
-                            <div style="margin-top: 10px; font-style: italic;">
+                            <div style="margin-top: 8px; font-style: italic;">
                                 Muhurat Time: 11:20 AM
                             </div>
                         </div>
@@ -540,7 +545,7 @@
                         <div class="event-details">
                             <div class="event-time">Tuesday, 28th October 2025</div>
                             <div class="event-time">8:00 PM onwards</div>
-                            <div style="margin-top: 10px; font-style: italic;">
+                            <div style="margin-top: 8px; font-style: italic;">
                                 Dinner & Celebrations
                             </div>
                         </div>
@@ -562,7 +567,7 @@
                 </div>
             </div>
 
-            <!-- With Blessings From - Updated Names -->
+            <!-- With Blessings From -->
             <div class="blessings-from">
                 <strong>With Blessings From</strong>
                 Yashoda Karola, Shanker Karola, Narender Karola, Narsing Rao Kondapuram, Near & Dear
