@@ -39,7 +39,6 @@
         height: 100%;
         height: -webkit-fill-available;
         overflow-x: hidden;
-        /* Prevent zoom on double-tap */
         touch-action: manipulation;
         -ms-touch-action: manipulation;
     }
@@ -57,12 +56,11 @@
       justify-content: center;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      /* Prevent zoom */
       touch-action: manipulation;
       -ms-touch-action: manipulation;
     }
 
-    /* Static background - works on all devices */
+    /* Static zoomed-out background */
     body::before {
       content: '';
       position: fixed;
@@ -74,22 +72,20 @@
       height: 100%;
       background-image: url('background.jpg');
       background-position: center center;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       z-index: -1;
-      /* Prevent any transformations */
       transform: translateZ(0) scale(1);
       -webkit-transform: translateZ(0) scale(1);
       transform-origin: center center;
       -webkit-transform-origin: center center;
-      /* Lock the background */
       pointer-events: none;
       touch-action: none;
       -ms-touch-action: none;
-      /* Prevent background from being affected by zoom */
       will-change: auto;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
+      background-color: #FFF8F0;
     }
 
     /* Scrollable content container */
@@ -127,7 +123,7 @@
         color: var(--primary-color);
         text-align: center;
         margin-bottom: 15px;
-        margin-top: 10px;
+        margin-top: 80px; /* CHANGED: Moved down 5 spaces (was 10px) */
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         word-wrap: break-word;
     }
@@ -165,7 +161,7 @@
 
     .names {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(26px, 6vw, 36px);
+        font-size: clamp(22px, 5vw, 30px); /* CHANGED: Reduced from 26px-36px */
         font-weight: 400;
         color: var(--primary-color);
         text-align: center;
@@ -209,7 +205,7 @@
     }
 
     .events-section {
-        margin-top: 100px;
+        margin-top: 20px; /* CHANGED: Reduced from 100px - removed 5 spaces */
         margin-bottom: 30px;
         padding: 20px 5px;
         background: transparent;
@@ -354,6 +350,10 @@
 
     /* Desktop specific styles */
     @media (min-width: 769px) {
+        body::before {
+            background-size: contain;
+        }
+
         .invitation-card {
             padding: 60px 20px;
             margin-top: 40px;
@@ -389,14 +389,18 @@
     /* Mobile devices - iOS and Android */
     @media (max-width: 768px) {
         body::before {
-            /* Ensure fixed background on mobile */
             position: fixed;
-            background-attachment: scroll; /* Better mobile compatibility */
+            background-attachment: scroll;
+            background-size: contain;
         }
     }
 
     /* Small mobile phones */
     @media (max-width: 380px) {
+        body::before {
+            background-size: contain;
+        }
+
         .invitation-card {
             padding: 30px 10px;
         }
@@ -424,7 +428,11 @@
         }
 
         .events-section {
-            margin-top: 60px;
+            margin-top: 15px; /* Also reduced on mobile */
+        }
+
+        .header {
+            margin-top: 50px; /* Less spacing on small mobile */
         }
     }
 
@@ -436,16 +444,16 @@
         }
 
         .header {
-            margin-top: 5px;
+            margin-top: 30px; /* Less spacing in landscape */
             margin-bottom: 15px;
         }
 
         .events-section {
-            margin-top: 40px;
+            margin-top: 15px;
         }
     }
 
-    /* iOS Safari specific - prevent zoom */
+    /* iOS Safari specific */
     @supports (-webkit-touch-callout: none) {
       html {
         height: -webkit-fill-available;
@@ -474,7 +482,7 @@
         }
     }
 
-    /* Prevent text size adjustment on orientation change */
+    /* Prevent text size adjustment */
     html {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
@@ -509,7 +517,7 @@
                 <div class="decorative-line"></div>
                 
                 <div class="names">Shashi Kumar</div>
-                <div style="font-size: clamp(22px, 5vw, 30px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 400;">&</div>
+                <div style="font-size: clamp(18px, 4.5vw, 26px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 400;">&</div>
                 <div class="names">Deeksha</div>
 
                 <div class="decorative-line"></div>
@@ -595,7 +603,7 @@
     </div>
 
     <script>
-        // Prevent zoom on mobile devices - additional JavaScript protection
+        // Prevent zoom on mobile devices
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
         });
