@@ -36,24 +36,22 @@
 
     html {
         height: 100%;
-        height: -webkit-fill-available;
         overflow-x: hidden;
     }
 
     body {
       margin: 0;
       padding: 0;
-      min-height: 100vh;
-      min-height: -webkit-fill-available;
+      min-height: 100vh; /* At least viewport height */
       width: 100%;
       overflow-x: hidden;
       
-      /* Background image - full screen stretched from top to bottom */
+      /* Background image stretches vertically to cover entire page content */
       background-image: url('background.jpg');
-      background-position: center center;
-      background-size: cover; /* Stretches to fill entire screen */
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-position: center top; /* Start from top */
+      background-size: 100% auto; /* Full width, auto height to maintain aspect ratio */
+      background-repeat: repeat-y; /* Repeat vertically if content is longer than image */
+      background-attachment: scroll; /* Scrolls with content */
       
       position: relative;
       
@@ -65,21 +63,6 @@
       
       /* Prevent horizontal scroll */
       max-width: 100vw;
-    }
-
-    /* Mobile: ensure background covers full height */
-    @media (max-width: 768px) {
-      html, body {
-        height: 100%;
-        min-height: 100vh;
-        min-height: -webkit-fill-available;
-      }
-
-      body {
-        background-attachment: scroll; /* Better performance on mobile */
-        background-size: cover; /* Ensure full coverage */
-        background-position: center center;
-      }
     }
 
     .invitation-card {
@@ -319,10 +302,6 @@
 
     /* Desktop specific styles */
     @media (min-width: 769px) {
-        body {
-            background-attachment: fixed; /* Fixed background on desktop */
-        }
-
         .invitation-card {
             padding: 60px 20px;
             margin-top: 40px;
@@ -399,13 +378,8 @@
 
     /* iOS specific fixes */
     @supports (-webkit-touch-callout: none) {
-      html {
-        height: -webkit-fill-available;
-      }
-
       body {
         min-height: -webkit-fill-available;
-        background-attachment: scroll; /* Scroll on iOS for better performance */
       }
     }
 
