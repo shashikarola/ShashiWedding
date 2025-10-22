@@ -18,12 +18,18 @@
         --soft-sage: #9DB4A3;
     }
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 40px;
       min-height: 100vh;
       
-      /* Sharp Background Image - No Blur */
+      /* Sharp Background Image - Fully Visible */
       background-color: #1a1a2e;
       background-image: url('background.jpg');
       background-position: center;
@@ -31,16 +37,13 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       
-      /* Remove any blur/filter */
-      filter: none;
-      -webkit-filter: none;
-      
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Dark overlay for better text readability - NO BLUR */
+    /* Optional: Very Light Dark Overlay for Text Readability */
+    /* Remove this entire section if you want NO overlay at all */
     body::before {
       content: '';
       position: fixed;
@@ -48,19 +51,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* Semi-transparent dark overlay only */
-      background: rgba(0, 0, 0, 0.4);
-      /* Removed gradient patterns that might cause blur */
+      /* Very light overlay - adjust or remove completely */
+      background: rgba(0, 0, 0, 0.2); /* Change to 0 for no overlay */
       pointer-events: none;
       z-index: 0;
-      /* NO BLUR FILTER */
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
     }
 
     .invitation-card {
         max-width: 850px;
-        background: transparent;
+        background: transparent; /* Fully transparent */
         padding: 60px;
         position: relative;
         border-radius: 8px;
@@ -71,9 +70,8 @@
         position: relative;
         z-index: 1;
         padding: 40px;
-        background: transparent;
+        background: transparent; /* Fully transparent */
         border-radius: 8px;
-        /* Removed backdrop-filter that was causing blur */
     }
 
     .header {
@@ -83,8 +81,8 @@
         text-align: center;
         margin-bottom: 30px;
         margin-top: 20px;
-        text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));
     }
 
     .subheader {
@@ -95,7 +93,7 @@
         margin-bottom: 30px;
         line-height: 1.8;
         letter-spacing: 0.5px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     }
 
     .family-names {
@@ -105,7 +103,7 @@
         text-align: center;
         margin: 25px 0;
         line-height: 1.6;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     }
 
     .family-names strong {
@@ -120,8 +118,8 @@
         color: var(--sage-green);
         text-align: center;
         margin: 20px 0;
-        text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        text-shadow: 3px 3px 8px rgba(0,0,0,1);
+        filter: drop-shadow(0 2px 6px rgba(0,0,0,0.8));
     }
 
     .decorative-line {
@@ -147,7 +145,7 @@
         transform: translateY(-50%);
         color: var(--sage-green);
         font-size: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     }
 
     .decorative-line::before {
@@ -161,7 +159,7 @@
     .events-section {
         margin: 40px 0;
         padding: 30px;
-        background: transparent;
+        background: transparent; /* Fully transparent */
         border: none;
         border-radius: 8px;
     }
@@ -173,11 +171,11 @@
         text-align: center;
         margin-bottom: 30px;
         font-weight: 600;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     }
 
     .event-item {
-        background: transparent;
+        background: transparent; /* Fully transparent */
         padding: 25px;
         margin: 20px 0;
         border-left: 4px solid var(--sage-green);
@@ -192,7 +190,7 @@
         font-weight: 600;
         margin-bottom: 20px;
         text-align: center;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     }
 
     .event-content {
@@ -208,7 +206,7 @@
         color: var(--cream);
         line-height: 1.8;
         text-align: left;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
         flex: 1;
     }
 
@@ -223,7 +221,7 @@
         font-size: 19px;
         color: var(--light-sage);
         padding: 20px;
-        background: transparent;
+        background: transparent; /* Fully transparent */
         border-radius: 5px;
         flex: 1;
         text-align: left;
@@ -248,12 +246,12 @@
         margin-top: 15px;
         transition: all 0.3s ease;
         border: 1px solid var(--sage-green);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     .directions-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.7);
         background: linear-gradient(45deg, var(--sage-green), var(--soft-sage));
     }
 
@@ -266,7 +264,7 @@
         margin-top: 40px;
         line-height: 1.6;
         letter-spacing: 0.5px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+        text-shadow: 2px 2px 6px rgba(0,0,0,1);
     }
 
     @media (max-width: 768px) {
@@ -312,7 +310,7 @@
             <div class="decorative-line"></div>
             
             <div class="names">Shashi Kumar</div>
-            <div style="font-size: 36px; color: var(--sage-green); text-align: center; text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">&</div>
+            <div style="font-size: 36px; color: var(--sage-green); text-align: center; text-shadow: 3px 3px 8px rgba(0,0,0,1);">&</div>
             <div class="names">Deeksha</div>
 
             <div class="decorative-line"></div>
