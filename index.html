@@ -23,20 +23,24 @@
       padding: 40px;
       min-height: 100vh;
       
-      /* Background Image - Local File */
-      background-color: #1a1a2e; /* Fallback color */
-      background: url('background.jpg') center/cover no-repeat fixed;
-      
-      /* Alternative: Use online image (uncomment if you prefer) */
-      /* background: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1920') center/cover no-repeat fixed; */
-      
+      /* Sharp Background Image - No Blur */
+      background-color: #1a1a2e;
+      background-image: url('background.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       background-attachment: fixed;
+      
+      /* Remove any blur/filter */
+      filter: none;
+      -webkit-filter: none;
+      
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Dark overlay for better text readability */
+    /* Dark overlay for better text readability - NO BLUR */
     body::before {
       content: '';
       position: fixed;
@@ -44,13 +48,14 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* Adjust opacity (0.5 = 50% dark) for readability */
-      background: rgba(0, 0, 0, 0.5);
-      background-image: 
-        radial-gradient(circle at 20% 50%, rgba(124, 152, 133, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(124, 152, 133, 0.1) 0%, transparent 50%);
+      /* Semi-transparent dark overlay only */
+      background: rgba(0, 0, 0, 0.4);
+      /* Removed gradient patterns that might cause blur */
       pointer-events: none;
       z-index: 0;
+      /* NO BLUR FILTER */
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .invitation-card {
@@ -68,6 +73,7 @@
         padding: 40px;
         background: transparent;
         border-radius: 8px;
+        /* Removed backdrop-filter that was causing blur */
     }
 
     .header {
@@ -266,7 +272,7 @@
     @media (max-width: 768px) {
         body { 
             padding: 20px; 
-            background-attachment: scroll; /* Better mobile performance */
+            background-attachment: scroll;
         }
         .invitation-card { padding: 30px; }
         .inner-content { padding: 20px; }
