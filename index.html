@@ -48,12 +48,13 @@
       width: 100%;
       overflow-x: hidden;
       
-      /* Fixed background image - stays in place while scrolling */
+      /* Background image - NOT zoomed, shows full image */
       background-image: url('background.jpg');
       background-position: center center;
-      background-size: cover;
+      background-size: contain; /* Changed from 'cover' to 'contain' - shows full image */
       background-repeat: no-repeat;
-      background-attachment: fixed; /* Fixed for all devices */
+      background-attachment: fixed;
+      background-color: #1a1a2e; /* Fallback color for empty space */
       
       position: relative;
       
@@ -378,10 +379,10 @@
         }
     }
 
-    /* iOS specific fixes - keep background fixed */
+    /* iOS specific fixes */
     @supports (-webkit-touch-callout: none) {
       body {
-        background-attachment: fixed; /* Keep fixed on iOS too */
+        background-attachment: fixed;
         min-height: -webkit-fill-available;
       }
 
