@@ -118,19 +118,19 @@
 
     .header {
         font-family: 'Dancing Script', cursive;
-        font-size: clamp(22px, 5vw, 32px);
+        font-size: clamp(18px, 4vw, 26px); /* REDUCED from 22px-32px */
         font-weight: 400;
         color: var(--primary-color);
         text-align: center;
         margin-bottom: 15px;
-        margin-top: 80px; /* CHANGED: Moved down 5 spaces (was 10px) */
+        margin-top: 80px;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         word-wrap: break-word;
     }
 
     .subheader {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(15px, 3.5vw, 19px);
+        font-size: clamp(13px, 3vw, 16px); /* REDUCED from 15px-19px */
         font-weight: 300;
         color: var(--dark-text);
         text-align: center;
@@ -143,7 +143,7 @@
 
     .family-names {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(15px, 3vw, 18px);
+        font-size: clamp(13px, 2.5vw, 15px); /* REDUCED from 15px-18px */
         font-weight: 300;
         color: var(--medium-text);
         text-align: center;
@@ -154,14 +154,14 @@
     }
 
     .family-names strong {
-        font-size: clamp(16px, 3.5vw, 20px);
+        font-size: clamp(14px, 3vw, 17px); /* REDUCED from 16px-20px */
         font-weight: 500;
         color: var(--primary-color);
     }
 
     .names {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(22px, 5vw, 30px); /* CHANGED: Reduced from 26px-36px */
+        font-size: clamp(18px, 4vw, 25px); /* REDUCED from 22px-30px */
         font-weight: 400;
         color: var(--primary-color);
         text-align: center;
@@ -192,7 +192,7 @@
         top: 50%;
         transform: translateY(-50%);
         color: var(--primary-color);
-        font-size: 16px;
+        font-size: 14px; /* REDUCED from 16px */
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
@@ -205,7 +205,7 @@
     }
 
     .events-section {
-        margin-top: 20px; /* CHANGED: Reduced from 100px - removed 5 spaces */
+        margin-top: 20px;
         margin-bottom: 30px;
         padding: 20px 5px;
         background: transparent;
@@ -214,7 +214,7 @@
 
     .event-title {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(19px, 4.5vw, 24px);
+        font-size: clamp(16px, 3.5vw, 20px); /* REDUCED from 19px-24px */
         font-weight: 500;
         color: var(--primary-color);
         text-align: center;
@@ -232,7 +232,7 @@
 
     .event-name {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(17px, 4vw, 22px);
+        font-size: clamp(14px, 3vw, 18px); /* REDUCED from 17px-22px */
         font-weight: 500;
         color: var(--primary-color);
         margin-bottom: 12px;
@@ -249,7 +249,7 @@
 
     .event-details {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(14px, 3vw, 17px);
+        font-size: clamp(12px, 2.5vw, 14px); /* REDUCED from 14px-17px */
         font-weight: 300;
         color: var(--dark-text);
         line-height: 1.7;
@@ -259,14 +259,14 @@
     }
 
     .event-time {
-        font-size: clamp(15px, 3.5vw, 18px);
+        font-size: clamp(13px, 3vw, 15px); /* REDUCED from 15px-18px */
         font-weight: 500;
         color: var(--medium-text);
         margin: 6px 0;
     }
 
     .event-venue {
-        font-size: clamp(14px, 3vw, 16px);
+        font-size: clamp(12px, 2.5vw, 14px); /* REDUCED from 14px-16px */
         font-weight: 300;
         color: var(--medium-text);
         padding: 12px;
@@ -279,7 +279,7 @@
 
     .event-venue strong {
         color: var(--primary-color);
-        font-size: clamp(15px, 3.5vw, 17px);
+        font-size: clamp(13px, 3vw, 15px); /* REDUCED from 15px-17px */
         font-weight: 500;
         display: block;
         margin-bottom: 8px;
@@ -293,7 +293,7 @@
         text-decoration: none;
         border-radius: 25px;
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(13px, 3vw, 15px);
+        font-size: clamp(11px, 2.5vw, 13px); /* REDUCED from 13px-15px */
         font-weight: 400;
         margin-top: 12px;
         transition: all 0.3s ease;
@@ -314,11 +314,11 @@
     /* With Blessings From Section */
     .blessings-from {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(14px, 3vw, 17px);
+        font-size: clamp(12px, 2.5vw, 14px); /* REDUCED from 14px-17px */
         font-weight: 300;
         color: var(--medium-text);
         text-align: center;
-        margin: 20px 0;
+        margin: 0 0 20px 0; /* CHANGED: Removed top margin (was 20px 0) */
         line-height: 1.7;
         padding: 0 15px;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
@@ -327,7 +327,7 @@
 
     .blessings-from strong {
         color: var(--primary-color);
-        font-size: clamp(16px, 3.5vw, 19px);
+        font-size: clamp(14px, 3vw, 16px); /* REDUCED from 16px-19px */
         font-weight: 500;
         display: block;
         margin-bottom: 8px;
@@ -335,7 +335,7 @@
 
     .blessing-text {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(15px, 3.5vw, 19px);
+        font-size: clamp(13px, 3vw, 16px); /* REDUCED from 15px-19px */
         font-weight: 300;
         color: var(--dark-text);
         text-align: center;
@@ -419,20 +419,20 @@
 
         .decorative-line::before {
             left: -20px;
-            font-size: 14px;
+            font-size: 12px; /* REDUCED */
         }
 
         .decorative-line::after {
             right: -20px;
-            font-size: 14px;
+            font-size: 12px; /* REDUCED */
         }
 
         .events-section {
-            margin-top: 15px; /* Also reduced on mobile */
+            margin-top: 15px;
         }
 
         .header {
-            margin-top: 50px; /* Less spacing on small mobile */
+            margin-top: 50px;
         }
     }
 
@@ -444,7 +444,7 @@
         }
 
         .header {
-            margin-top: 30px; /* Less spacing in landscape */
+            margin-top: 30px;
             margin-bottom: 15px;
         }
 
@@ -517,7 +517,7 @@
                 <div class="decorative-line"></div>
                 
                 <div class="names">Shashi Kumar</div>
-                <div style="font-size: clamp(18px, 4.5vw, 26px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 400;">&</div>
+                <div style="font-size: clamp(15px, 3.5vw, 22px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 400;">&</div>
                 <div class="names">Deeksha</div>
 
                 <div class="decorative-line"></div>
