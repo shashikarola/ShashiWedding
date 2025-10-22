@@ -8,13 +8,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
         
     :root {
-        --primary-gold: #D4AF37;
-        --dark-gold: #B8860B;
-        --light-gold: #F4E4C1;
-        --cream: #FFF8DC;
-        --soft-cream: #FFFEF7;
-        --champagne: #F7E7CE;
-        --deep-gold: #9B7E3A;
+        /* Rose Gold / Blush Pink Theme */
+        --primary-color: #B76E79;
+        --dark-accent: #8B4F5C;
+        --light-accent: #E8B4BC;
+        --cream: #FFF8F0;
+        --soft-cream: #FFFEFA;
+        --champagne: #F4D6D9;
+        --deep-accent: #6D3F47;
     }
 
     * {
@@ -36,7 +37,6 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      /* Reduced font smoothing for sharper text */
       -webkit-font-smoothing: subpixel-antialiased;
       -moz-osx-font-smoothing: auto;
     }
@@ -59,11 +59,11 @@
     .header {
         font-family: 'Dancing Script', cursive;
         font-size: 52px;
-        color: var(--primary-gold);
+        color: var(--primary-color);
         text-align: center;
         margin-bottom: 30px;
         margin-top: 20px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .subheader {
@@ -74,7 +74,7 @@
         margin-bottom: 30px;
         line-height: 1.8;
         letter-spacing: 0.5px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .family-names {
@@ -84,22 +84,22 @@
         text-align: center;
         margin: 25px 0;
         line-height: 1.6;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .family-names strong {
         font-size: 24px;
         font-weight: 600;
-        color: var(--primary-gold);
+        color: var(--primary-color);
     }
 
     .names {
         font-family: 'Playfair Display', serif;
         font-size: 44px;
-        color: var(--primary-gold);
+        color: var(--primary-color);
         text-align: center;
         margin: 20px 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .decorative-line {
@@ -107,9 +107,9 @@
         background: linear-gradient(
             to right,
             transparent,
-            var(--primary-gold),
-            var(--dark-gold),
-            var(--primary-gold),
+            var(--primary-color),
+            var(--dark-accent),
+            var(--primary-color),
             transparent
         );
         margin: 30px auto;
@@ -123,9 +123,9 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--primary-gold);
+        color: var(--primary-color);
         font-size: 20px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .decorative-line::before {
@@ -146,29 +146,29 @@
     .event-title {
         font-family: 'Playfair Display', serif;
         font-size: 28px;
-        color: var(--primary-gold);
+        color: var(--primary-color);
         text-align: center;
         margin-bottom: 30px;
         font-weight: 600;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .event-item {
         background: transparent;
         padding: 25px 15px;
         margin: 20px 0;
-        border-left: 4px solid var(--primary-gold);
+        border-left: 4px solid var(--primary-color);
         border-radius: 5px;
     }
 
     .event-name {
         font-family: 'Playfair Display', serif;
         font-size: 26px;
-        color: var(--primary-gold);
+        color: var(--primary-color);
         font-weight: 600;
         margin-bottom: 20px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
     .event-content {
@@ -184,7 +184,7 @@
         color: var(--soft-cream);
         line-height: 1.8;
         text-align: left;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         flex: 1;
     }
 
@@ -206,7 +206,7 @@
     }
 
     .event-venue strong {
-        color: var(--primary-gold);
+        color: var(--primary-color);
         font-size: 20px;
         display: block;
         margin-bottom: 10px;
@@ -215,7 +215,7 @@
     .directions-btn {
         display: inline-block;
         padding: 10px 20px;
-        background: linear-gradient(45deg, var(--dark-gold), var(--primary-gold));
+        background: linear-gradient(45deg, var(--dark-accent), var(--primary-color));
         color: white;
         text-decoration: none;
         border-radius: 25px;
@@ -223,14 +223,14 @@
         font-size: 16px;
         margin-top: 15px;
         transition: all 0.3s ease;
-        border: 1px solid var(--primary-gold);
+        border: 1px solid var(--primary-color);
         box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     .directions-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(0,0,0,0.7);
-        background: linear-gradient(45deg, var(--primary-gold), var(--light-gold));
+        background: linear-gradient(45deg, var(--primary-color), var(--light-accent));
     }
 
     .blessing-text {
@@ -242,7 +242,7 @@
         margin-top: 40px;
         line-height: 1.6;
         letter-spacing: 0.5px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         padding: 0 20px;
     }
 
@@ -307,7 +307,6 @@
         }
     }
 
-    /* iOS Safari fix */
     @supports (-webkit-touch-callout: none) {
       body {
         background-attachment: scroll;
@@ -327,7 +326,6 @@
                 we joyfully invite you to the Wedding Ceremony of
             </div>
 
-            <!-- Family Names Section -->
             <div class="family-names">
                 <strong>Son of</strong><br>
                 Karola Srinivas & Bhagya Laxmi
@@ -336,22 +334,19 @@
             <div class="decorative-line"></div>
             
             <div class="names">Shashi Kumar</div>
-            <div style="font-size: 36px; color: var(--primary-gold); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">&</div>
+            <div style="font-size: 36px; color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">&</div>
             <div class="names">Deeksha</div>
 
             <div class="decorative-line"></div>
 
-            <!-- Family Names Section -->
             <div class="family-names">
                 <strong>Daughter of</strong><br>
                 Salandri Niranjan Yadav & Sandhya
             </div>
 
-            <!-- Multiple Events Section -->
             <div class="events-section">
                 <div class="event-title">Wedding Events</div>
                 
-                <!-- Wedding Ceremony -->
                 <div class="event-item">
                     <div class="event-name">
                         Wedding Ceremony
@@ -380,7 +375,6 @@
                     </div>
                 </div>
 
-                <!-- Reception -->
                 <div class="event-item">
                     <div class="event-name">
                         Reception Ceremony
@@ -410,7 +404,6 @@
                 </div>
             </div>
 
-            <!-- Blessing Text -->
             <div class="blessing-text">
                 Your presence will make our day more special.<br>
                 We seek your gracious presence and blessings<br>
