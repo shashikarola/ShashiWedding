@@ -8,14 +8,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
         
     :root {
-        --deep-red: #800020;
-        --sage-green: #7C9885;
-        --dark-emerald: #4A6B5C;
-        --light-sage: #C8D5C8;
-        --maroon: #800000;
+        --primary-gold: #D4AF37;
+        --dark-gold: #B8860B;
+        --light-gold: #F4E4C1;
         --cream: #FFF8DC;
-        --burgundy: #6B0F1A;
-        --soft-sage: #9DB4A3;
+        --soft-cream: #FFFEF7;
+        --champagne: #F7E7CE;
+        --deep-gold: #9B7E3A;
     }
 
     * {
@@ -25,7 +24,6 @@
     }
 
     html {
-        /* Force sharp rendering */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -35,7 +33,7 @@
       padding: 40px;
       min-height: 100vh;
       
-      /* Clear, sharp background - NO BLUR */
+      /* Clear, sharp background */
       background-color: #1a1a2e;
       background-image: url('background.jpg');
       background-position: center center;
@@ -43,11 +41,9 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       
-      /* Force high quality rendering */
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
       
-      /* NO FILTERS */
       filter: none;
       -webkit-filter: none;
       backdrop-filter: none;
@@ -58,7 +54,7 @@
       justify-content: center;
     }
 
-    /* Dark overlay - SIMPLE VERSION */
+    /* Dark overlay */
     body::before {
       content: '';
       position: fixed;
@@ -78,7 +74,6 @@
         position: relative;
         border-radius: 8px;
         z-index: 1;
-        /* NO BLUR */
         filter: none;
         backdrop-filter: none;
     }
@@ -89,7 +84,6 @@
         padding: 40px;
         background: transparent;
         border-radius: 8px;
-        /* NO BLUR */
         filter: none;
         backdrop-filter: none;
     }
@@ -97,7 +91,7 @@
     .header {
         font-family: 'Dancing Script', cursive;
         font-size: 52px;
-        color: var(--sage-green);
+        color: var(--primary-gold);
         text-align: center;
         margin-bottom: 30px;
         margin-top: 20px;
@@ -107,7 +101,7 @@
     .subheader {
         font-family: 'Cormorant Garamond', serif;
         font-size: 24px;
-        color: var(--cream);
+        color: var(--soft-cream);
         text-align: center;
         margin-bottom: 30px;
         line-height: 1.8;
@@ -118,7 +112,7 @@
     .family-names {
         font-family: 'Cormorant Garamond', serif;
         font-size: 22px;
-        color: var(--light-sage);
+        color: var(--champagne);
         text-align: center;
         margin: 25px 0;
         line-height: 1.6;
@@ -128,13 +122,13 @@
     .family-names strong {
         font-size: 24px;
         font-weight: 600;
-        color: var(--sage-green);
+        color: var(--primary-gold);
     }
 
     .names {
         font-family: 'Playfair Display', serif;
         font-size: 44px;
-        color: var(--sage-green);
+        color: var(--primary-gold);
         text-align: center;
         margin: 20px 0;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.8);
@@ -145,9 +139,9 @@
         background: linear-gradient(
             to right,
             transparent,
-            var(--sage-green),
-            var(--dark-emerald),
-            var(--sage-green),
+            var(--primary-gold),
+            var(--dark-gold),
+            var(--primary-gold),
             transparent
         );
         margin: 30px auto;
@@ -161,7 +155,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--sage-green);
+        color: var(--primary-gold);
         font-size: 20px;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
     }
@@ -185,7 +179,7 @@
     .event-title {
         font-family: 'Playfair Display', serif;
         font-size: 28px;
-        color: var(--sage-green);
+        color: var(--primary-gold);
         text-align: center;
         margin-bottom: 30px;
         font-weight: 600;
@@ -196,7 +190,7 @@
         background: transparent;
         padding: 25px;
         margin: 20px 0;
-        border-left: 4px solid var(--sage-green);
+        border-left: 4px solid var(--primary-gold);
         border-radius: 5px;
         box-shadow: none;
     }
@@ -204,7 +198,7 @@
     .event-name {
         font-family: 'Playfair Display', serif;
         font-size: 26px;
-        color: var(--sage-green);
+        color: var(--primary-gold);
         font-weight: 600;
         margin-bottom: 20px;
         text-align: center;
@@ -221,7 +215,7 @@
     .event-details {
         font-family: 'Cormorant Garamond', serif;
         font-size: 20px;
-        color: var(--cream);
+        color: var(--soft-cream);
         line-height: 1.8;
         text-align: left;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
@@ -231,13 +225,13 @@
     .event-time {
         font-size: 22px;
         font-weight: 600;
-        color: var(--light-sage);
+        color: var(--champagne);
         margin: 10px 0;
     }
 
     .event-venue {
         font-size: 19px;
-        color: var(--light-sage);
+        color: var(--champagne);
         padding: 20px;
         background: transparent;
         border-radius: 5px;
@@ -246,7 +240,7 @@
     }
 
     .event-venue strong {
-        color: var(--sage-green);
+        color: var(--primary-gold);
         font-size: 20px;
         display: block;
         margin-bottom: 10px;
@@ -255,7 +249,7 @@
     .directions-btn {
         display: inline-block;
         padding: 10px 20px;
-        background: linear-gradient(45deg, var(--dark-emerald), var(--sage-green));
+        background: linear-gradient(45deg, var(--dark-gold), var(--primary-gold));
         color: white;
         text-decoration: none;
         border-radius: 25px;
@@ -263,20 +257,20 @@
         font-size: 16px;
         margin-top: 15px;
         transition: all 0.3s ease;
-        border: 1px solid var(--sage-green);
+        border: 1px solid var(--primary-gold);
         box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     .directions-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(0,0,0,0.7);
-        background: linear-gradient(45deg, var(--sage-green), var(--soft-sage));
+        background: linear-gradient(45deg, var(--primary-gold), var(--light-gold));
     }
 
     .blessing-text {
         font-family: 'Cormorant Garamond', serif;
         font-size: 24px;
-        color: var(--cream);
+        color: var(--soft-cream);
         text-align: center;
         font-style: italic;
         margin-top: 40px;
@@ -328,7 +322,7 @@
             <div class="decorative-line"></div>
             
             <div class="names">Shashi Kumar</div>
-            <div style="font-size: 36px; color: var(--sage-green); text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">&</div>
+            <div style="font-size: 36px; color: var(--primary-gold); text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">&</div>
             <div class="names">Deeksha</div>
 
             <div class="decorative-line"></div>
