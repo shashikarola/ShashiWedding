@@ -36,8 +36,9 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      /* Reduced font smoothing for sharper text */
+      -webkit-font-smoothing: subpixel-antialiased;
+      -moz-osx-font-smoothing: auto;
     }
 
     .invitation-card {
@@ -62,7 +63,7 @@
         text-align: center;
         margin-bottom: 30px;
         margin-top: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.8);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .subheader {
@@ -73,7 +74,7 @@
         margin-bottom: 30px;
         line-height: 1.8;
         letter-spacing: 0.5px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .family-names {
@@ -83,7 +84,7 @@
         text-align: center;
         margin: 25px 0;
         line-height: 1.6;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .family-names strong {
@@ -98,7 +99,7 @@
         color: var(--primary-gold);
         text-align: center;
         margin: 20px 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.8);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .decorative-line {
@@ -124,7 +125,7 @@
         transform: translateY(-50%);
         color: var(--primary-gold);
         font-size: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .decorative-line::before {
@@ -149,7 +150,7 @@
         text-align: center;
         margin-bottom: 30px;
         font-weight: 600;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .event-item {
@@ -167,7 +168,7 @@
         font-weight: 600;
         margin-bottom: 20px;
         text-align: center;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
     }
 
     .event-content {
@@ -183,7 +184,7 @@
         color: var(--soft-cream);
         line-height: 1.8;
         text-align: left;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
         flex: 1;
     }
 
@@ -241,7 +242,7 @@
         margin-top: 40px;
         line-height: 1.6;
         letter-spacing: 0.5px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.8);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Reduced blur */
         padding: 0 20px;
     }
 
@@ -335,7 +336,7 @@
             <div class="decorative-line"></div>
             
             <div class="names">Shashi Kumar</div>
-            <div style="font-size: 36px; color: var(--primary-gold); text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">&</div>
+            <div style="font-size: 36px; color: var(--primary-gold); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">&</div>
             <div class="names">Deeksha</div>
 
             <div class="decorative-line"></div>
