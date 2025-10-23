@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  
+  <!-- STEP 1: Upload your image to ImgBB.com and replace this URL -->
+  <meta property="og:image" content="https://i.ibb.co/XXXXXXX/preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Shashi & Deeksha's Wedding - 26th October 2025" />
+  <meta property="og:description" content="Join us in celebrating our wedding on 26th October 2025 at Manda Narsimha Reddy Gardens, Hyderabad" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,53 +19,12 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#8B4F5C">
   
-  <!-- CRITICAL: Title must be before other meta tags -->
   <title>Shashi & Deeksha's Wedding - 26th October 2025</title>
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="Shashi & Deeksha's Wedding - 26th October 2025">
-  <meta name="description" content="Join us in celebrating the wedding of Shashi Kumar & Deeksha on 26th October 2025 at Manda Narsimha Reddy Gardens, Hyderabad. Your presence will make our day more special!">
-  <meta name="author" content="Shashi & Deeksha">
-  
-  <!-- Open Graph / Facebook / WhatsApp (ORDER MATTERS!) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com/index.html">
-  <meta property="og:site_name" content="Shashi & Deeksha's Wedding">
-  <meta property="og:title" content="Shashi & Deeksha's Wedding - 26th October 2025">
-  <meta property="og:description" content="Join us in celebrating the wedding of Shashi Kumar & Deeksha on 26th October 2025 at Manda Narsimha Reddy Gardens, Hyderabad. Your presence will make our day more special!">
-  
-  <!-- CRITICAL: Image tags - ABSOLUTE HTTPS URL REQUIRED -->
-  <meta property="og:image" content="https://yourwebsite.com/preview.jpg">
-  <meta property="og:image:secure_url" content="https://yourwebsite.com/preview.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Shashi & Deeksha Wedding Invitation">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:updated_time" content="1704067200">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://yourwebsite.com/index.html">
-  <meta name="twitter:title" content="Shashi & Deeksha's Wedding - 26th October 2025">
-  <meta name="twitter:description" content="Join us in celebrating the wedding of Shashi Kumar & Deeksha on 26th October 2025. Your presence will make our day more special!">
-  <meta name="twitter:image" content="https://yourwebsite.com/preview.jpg">
-  <meta name="twitter:image:alt" content="Shashi & Deeksha Wedding Invitation">
-  
-  <!-- iPhone Specific -->
-  <meta name="apple-mobile-web-app-title" content="Wedding Invitation">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://yourwebsite.com/index.html">
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Dancing+Script:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
         
     :root {
-        /* Darker Rose Gold / Blush Pink Theme */
         --primary-color: #8B4F5C;
         --dark-accent: #6D3F47;
         --light-accent: #B76E79;
@@ -63,8 +32,6 @@
         --soft-cream: #FFFEFA;
         --champagne: #F4D6D9;
         --deep-accent: #5A3339;
-        
-        /* Darker text colors */
         --dark-text: #2C2C2C;
         --medium-text: #3A3A3A;
     }
@@ -102,7 +69,6 @@
       -ms-touch-action: manipulation;
     }
 
-    /* Static zoomed-out background */
     body::before {
       content: '';
       position: fixed;
@@ -130,7 +96,6 @@
       background-color: #FFF8F0;
     }
 
-    /* Scrollable content container */
     .page-wrapper {
         width: 100%;
         height: 100%;
@@ -353,7 +318,6 @@
         box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
 
-    /* With Blessings From Section */
     .blessings-from {
         font-family: 'Cormorant Garamond', serif;
         font-size: clamp(10px, 2vw, 12px);
@@ -375,7 +339,6 @@
         margin-bottom: 8px;
     }
 
-    /* WRAPPED NAMES IN 3 LINES */
     .blessing-names {
         font-family: 'Cormorant Garamond', serif;
         font-size: clamp(10px, 2vw, 12px);
@@ -407,7 +370,6 @@
         margin-right: auto;
     }
 
-    /* Desktop specific styles */
     @media (min-width: 769px) {
         body::before {
             background-size: contain;
@@ -444,7 +406,6 @@
         }
     }
 
-    /* Mobile devices - iOS and Android */
     @media (max-width: 768px) {
         body::before {
             position: fixed;
@@ -453,7 +414,6 @@
         }
     }
 
-    /* Small mobile phones */
     @media (max-width: 380px) {
         body::before {
             background-size: contain;
@@ -494,7 +454,6 @@
         }
     }
 
-    /* Landscape mode on mobile */
     @media (max-height: 500px) and (orientation: landscape) {
         .invitation-card {
             margin-top: 10px;
@@ -511,7 +470,6 @@
         }
     }
 
-    /* iOS Safari specific */
     @supports (-webkit-touch-callout: none) {
       html {
         height: -webkit-fill-available;
@@ -530,7 +488,6 @@
       }
     }
 
-    /* Safe area for notched devices */
     @supports (padding: max(0px)) {
         .invitation-card {
             padding-left: max(20px, env(safe-area-inset-left));
@@ -540,14 +497,12 @@
         }
     }
 
-    /* Prevent text size adjustment */
     html {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
         text-size-adjust: 100%;
     }
 
-    /* Smooth scrolling only for content */
     .page-wrapper {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
@@ -667,7 +622,6 @@
     </div>
 
     <script>
-        // Prevent zoom on mobile devices
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
         });
@@ -680,7 +634,6 @@
             e.preventDefault();
         });
 
-        // Prevent double-tap zoom
         let lastTouchEnd = 0;
         document.addEventListener('touchend', function (event) {
             const now = (new Date()).getTime();
@@ -690,7 +643,6 @@
             lastTouchEnd = now;
         }, false);
 
-        // Prevent pinch zoom
         document.addEventListener('touchmove', function (event) {
             if (event.scale !== 1) {
                 event.preventDefault();
