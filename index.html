@@ -34,7 +34,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#8B4F5C">
+  <meta name="theme-color" content="#D4AF37">
   
   <title>Shashi & Deeksha's Wedding - 26th October 2025</title>
   
@@ -45,13 +45,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Dancing+Script:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
         
     :root {
-        --primary-color: #8B4F5C;
-        --dark-accent: #6D3F47;
-        --light-accent: #B76E79;
-        --cream: #FFF8F0;
-        --soft-cream: #FFFEFA;
-        --champagne: #F4D6D9;
-        --deep-accent: #5A3339;
+        /* Vibrant Gold Theme */
+        --primary-color: #D4AF37;      /* Vibrant Gold */
+        --dark-accent: #B8860B;        /* Dark Goldenrod */
+        --light-accent: #FFD700;       /* Bright Gold */
+        --cream: #FFF8F0;              /* Cream */
+        --soft-cream: #FFFEFA;         /* Soft Cream */
+        --champagne: #F5DEB3;          /* Champagne Gold */
+        --deep-accent: #8B6914;        /* Deep Gold */
+        
+        /* Darker text colors */
         --dark-text: #2C2C2C;
         --medium-text: #3A3A3A;
     }
@@ -89,6 +92,7 @@
       -ms-touch-action: manipulation;
     }
 
+    /* Static zoomed-out background */
     body::before {
       content: '';
       position: fixed;
@@ -116,6 +120,7 @@
       background-color: #FFF8F0;
     }
 
+    /* Scrollable content container */
     .page-wrapper {
         width: 100%;
         height: 100%;
@@ -233,7 +238,7 @@
 
     .events-section {
         margin-top: 10px;
-        margin-bottom: 10px; /* REDUCED from 30px to 10px */
+        margin-bottom: 30px;
         padding: 20px 5px;
         background: transparent;
         border: none;
@@ -252,7 +257,7 @@
     .event-item {
         background: transparent;
         padding: 18px 10px;
-        margin: 10px 0; /* REDUCED from 18px to 10px */
+        margin: 18px 0;
         border-left: 3px solid var(--primary-color);
         border-radius: 5px;
     }
@@ -338,13 +343,14 @@
         box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
 
+    /* With Blessings From Section */
     .blessings-from {
         font-family: 'Cormorant Garamond', serif;
         font-size: clamp(10px, 2vw, 12px);
         font-weight: 300;
         color: var(--medium-text);
         text-align: center;
-        margin: -25px 0 20px 0; /* REDUCED from -15px to -25px (moved closer) */
+        margin: -15px 0 20px 0;
         line-height: 1.7;
         padding: 0 15px;
         text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
@@ -359,6 +365,7 @@
         margin-bottom: 8px;
     }
 
+    /* WRAPPED NAMES IN 3 LINES */
     .blessing-names {
         font-family: 'Cormorant Garamond', serif;
         font-size: clamp(10px, 2vw, 12px);
@@ -390,6 +397,7 @@
         margin-right: auto;
     }
 
+    /* Desktop specific styles */
     @media (min-width: 769px) {
         body::before {
             background-size: contain;
@@ -426,6 +434,7 @@
         }
     }
 
+    /* Mobile devices - iOS and Android */
     @media (max-width: 768px) {
         body::before {
             position: fixed;
@@ -434,6 +443,7 @@
         }
     }
 
+    /* Small mobile phones */
     @media (max-width: 380px) {
         body::before {
             background-size: contain;
@@ -449,7 +459,6 @@
 
         .event-item {
             padding: 15px 8px;
-            margin: 8px 0; /* REDUCED for small screens */
         }
 
         .decorative-line {
@@ -468,7 +477,6 @@
 
         .events-section {
             margin-top: 10px;
-            margin-bottom: 8px; /* REDUCED for small screens */
         }
 
         .header {
@@ -476,6 +484,7 @@
         }
     }
 
+    /* Landscape mode on mobile */
     @media (max-height: 500px) and (orientation: landscape) {
         .invitation-card {
             margin-top: 10px;
@@ -492,6 +501,7 @@
         }
     }
 
+    /* iOS Safari specific */
     @supports (-webkit-touch-callout: none) {
       html {
         height: -webkit-fill-available;
@@ -510,6 +520,7 @@
       }
     }
 
+    /* Safe area for notched devices */
     @supports (padding: max(0px)) {
         .invitation-card {
             padding-left: max(20px, env(safe-area-inset-left));
@@ -519,12 +530,14 @@
         }
     }
 
+    /* Prevent text size adjustment */
     html {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
         text-size-adjust: 100%;
     }
 
+    /* Smooth scrolling only for content */
     .page-wrapper {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
