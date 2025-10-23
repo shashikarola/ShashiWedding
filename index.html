@@ -1,26 +1,673 @@
-{
-  "headers": [
-    {
-      "source": "/preview.jpg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  <!-- Open Graph / Facebook / WhatsApp Meta Tags - MUST USE ABSOLUTE URL -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shashi-wedding.vercel.app/" />
+  <meta property="og:title" content="Shashi & Deeksha's Wedding - 26th October 2025" />
+  <meta property="og:description" content="Join us in celebrating the wedding of Shashi Kumar & Deeksha on 26th October 2025 at Manda Narsimha Reddy Gardens, Hyderabad. Your presence will make our day more special!" />
+  <meta property="og:image" content="https://shashi-wedding.vercel.app/preview.jpg" />
+  <meta property="og:image:secure_url" content="https://shashi-wedding.vercel.app/preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Shashi & Deeksha Wedding Invitation - 26th October 2025" />
+  <meta property="og:site_name" content="Shashi & Deeksha's Wedding" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://shashi-wedding.vercel.app/" />
+  <meta name="twitter:title" content="Shashi & Deeksha's Wedding - 26th October 2025" />
+  <meta name="twitter:description" content="Join us in celebrating the wedding of Shashi Kumar & Deeksha on 26th October 2025. Your presence will make our day more special!" />
+  <meta name="twitter:image" content="https://shashi-wedding.vercel.app/preview.jpg" />
+  <meta name="twitter:image:alt" content="Shashi & Deeksha Wedding Invitation" />
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Shashi & Deeksha's Wedding - 26th October 2025" />
+  <meta name="description" content="Join us in celebrating the wedding of Shashi Kumar & Deeksha on 26th October 2025 at Manda Narsimha Reddy Gardens, Hyderabad. Your presence will make our day more special!" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#8B4F5C">
+  
+  <title>Shashi & Deeksha's Wedding - 26th October 2025</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://shashi-wedding.vercel.app/" />
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Dancing+Script:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+        
+    :root {
+        --primary-color: #8B4F5C;
+        --dark-accent: #6D3F47;
+        --light-accent: #B76E79;
+        --cream: #FFF8F0;
+        --soft-cream: #FFFEFA;
+        --champagne: #F4D6D9;
+        --deep-accent: #5A3339;
+        --dark-text: #2C2C2C;
+        --medium-text: #3A3A3A;
     }
-  ]
-}
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    html {
+        height: 100%;
+        height: -webkit-fill-available;
+        overflow-x: hidden;
+        touch-action: manipulation;
+        -ms-touch-action: manipulation;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      width: 100%;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      touch-action: manipulation;
+      -ms-touch-action: manipulation;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('background.jpg');
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      transform: translateZ(0) scale(1);
+      -webkit-transform: translateZ(0) scale(1);
+      transform-origin: center center;
+      -webkit-transform-origin: center center;
+      pointer-events: none;
+      touch-action: none;
+      -ms-touch-action: none;
+      will-change: auto;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background-color: #FFF8F0;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        z-index: 1;
+    }
+
+    .invitation-card {
+        max-width: 850px;
+        width: 100%;
+        background: transparent;
+        padding: 40px 20px;
+        position: relative;
+        margin: 20px auto 40px;
+        z-index: 1;
+    }
+
+    .inner-content {
+        position: relative;
+        padding: 30px 15px;
+        background: transparent;
+        width: 100%;
+    }
+
+    .header {
+        font-family: 'Dancing Script', cursive;
+        font-size: clamp(18px, 4vw, 26px);
+        font-weight: 400;
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 15px;
+        margin-top: 80px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        word-wrap: break-word;
+    }
+
+    .subheader {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(11px, 2.5vw, 13px);
+        font-weight: 300;
+        color: var(--dark-text);
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        letter-spacing: 0.3px;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        word-wrap: break-word;
+    }
+
+    .family-names {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(13px, 2.5vw, 15px);
+        font-weight: 300;
+        color: var(--medium-text);
+        text-align: center;
+        margin: 18px 0;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        word-wrap: break-word;
+    }
+
+    .family-names strong {
+        font-size: clamp(14px, 3vw, 17px);
+        font-weight: 500;
+        color: var(--primary-color);
+    }
+
+    .names {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(18px, 4vw, 25px);
+        font-weight: 400;
+        color: var(--primary-color);
+        text-align: center;
+        margin: 12px 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        word-wrap: break-word;
+    }
+
+    .decorative-line {
+        height: 1.5px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            var(--primary-color),
+            var(--dark-accent),
+            var(--primary-color),
+            transparent
+        );
+        margin: 20px auto;
+        width: min(220px, 75%);
+        position: relative;
+    }
+
+    .decorative-line::before,
+    .decorative-line::after {
+        content: '❀';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--primary-color);
+        font-size: 14px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+
+    .decorative-line::before {
+        left: -25px;
+    }
+
+    .decorative-line::after {
+        right: -25px;
+    }
+
+    .events-section {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 20px 5px;
+        background: transparent;
+        border: none;
+    }
+
+    .event-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(16px, 3.5vw, 20px);
+        font-weight: 500;
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+
+    .event-item {
+        background: transparent;
+        padding: 18px 10px;
+        margin: 18px 0;
+        border-left: 3px solid var(--primary-color);
+        border-radius: 5px;
+    }
+
+    .event-name {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(14px, 3vw, 18px);
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-bottom: 12px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+
+    .event-content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .event-details {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(12px, 2.5vw, 14px);
+        font-weight: 300;
+        color: var(--dark-text);
+        line-height: 1.7;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        width: 100%;
+    }
+
+    .event-time {
+        font-size: clamp(13px, 3vw, 15px);
+        font-weight: 500;
+        color: var(--medium-text);
+        margin: 6px 0;
+    }
+
+    .event-venue {
+        font-size: clamp(12px, 2.5vw, 14px);
+        font-weight: 300;
+        color: var(--medium-text);
+        padding: 12px;
+        background: transparent;
+        border-radius: 5px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        width: 100%;
+    }
+
+    .event-venue strong {
+        color: var(--primary-color);
+        font-size: clamp(13px, 3vw, 15px);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .directions-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: linear-gradient(45deg, var(--dark-accent), var(--primary-color));
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(11px, 2.5vw, 13px);
+        font-weight: 400;
+        margin-top: 12px;
+        transition: all 0.3s ease;
+        border: 1px solid var(--primary-color);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .directions-btn:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .blessings-from {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(10px, 2vw, 12px);
+        font-weight: 300;
+        color: var(--medium-text);
+        text-align: center;
+        margin: -15px 0 20px 0;
+        line-height: 1.7;
+        padding: 0 15px;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        word-wrap: break-word;
+    }
+
+    .blessings-from strong {
+        color: var(--primary-color);
+        font-size: clamp(12px, 2.5vw, 14px);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .blessing-names {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(10px, 2vw, 12px);
+        font-weight: 300;
+        color: var(--medium-text);
+        text-align: center;
+        line-height: 1.7;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        word-wrap: break-word;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .blessing-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(11px, 2.5vw, 13px);
+        font-weight: 300;
+        color: var(--dark-text);
+        text-align: center;
+        font-style: italic;
+        margin-top: 18px;
+        line-height: 1.8;
+        letter-spacing: 0.3px;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        padding: 0 15px;
+        word-wrap: break-word;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: 769px) {
+        body::before {
+            background-size: contain;
+        }
+
+        .invitation-card {
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+
+        .inner-content {
+            padding: 40px 20px;
+        }
+
+        .event-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .event-details {
+            text-align: center;
+            width: 100%;
+        }
+
+        .event-venue {
+            text-align: center;
+            width: 100%;
+        }
+
+        .directions-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+            background: linear-gradient(45deg, var(--primary-color), var(--light-accent));
+        }
+    }
+
+    @media (max-width: 768px) {
+        body::before {
+            position: fixed;
+            background-attachment: scroll;
+            background-size: contain;
+        }
+    }
+
+    @media (max-width: 380px) {
+        body::before {
+            background-size: contain;
+        }
+
+        .invitation-card {
+            padding: 30px 10px;
+        }
+
+        .inner-content {
+            padding: 20px 10px;
+        }
+
+        .event-item {
+            padding: 15px 8px;
+        }
+
+        .decorative-line {
+            width: 70%;
+        }
+
+        .decorative-line::before {
+            left: -20px;
+            font-size: 12px;
+        }
+
+        .decorative-line::after {
+            right: -20px;
+            font-size: 12px;
+        }
+
+        .events-section {
+            margin-top: 10px;
+        }
+
+        .header {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        .invitation-card {
+            margin-top: 10px;
+            padding: 20px 15px;
+        }
+
+        .header {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .events-section {
+            margin-top: 10px;
+        }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      html {
+        height: -webkit-fill-available;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        min-height: -webkit-fill-available;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body::before {
+        position: fixed;
+        height: 100vh;
+        height: -webkit-fill-available;
+      }
+    }
+
+    @supports (padding: max(0px)) {
+        .invitation-card {
+            padding-left: max(20px, env(safe-area-inset-left));
+            padding-right: max(20px, env(safe-area-inset-right));
+            padding-top: max(20px, env(safe-area-inset-top));
+            padding-bottom: max(40px, env(safe-area-inset-bottom));
+        }
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    .page-wrapper {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="invitation-card">
+            <div class="inner-content">
+                
+                <div class="header">Wedding Celebration</div>
+                
+                <div class="subheader">
+                    With the blessings of Lord Ganesha<br>
+                    and the grace of our families,<br>
+                    we joyfully invite you to the Wedding Ceremony of
+                </div>
+
+                <div class="family-names">
+                    <strong>Son of</strong><br>
+                    Karola Srinivas & Bhagya Laxmi
+                </div>
+
+                <div class="decorative-line"></div>
+                
+                <div class="names">Shashi Kumar</div>
+                <div style="font-size: clamp(15px, 3.5vw, 22px); color: var(--primary-color); text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 400;">&</div>
+                <div class="names">Deeksha</div>
+
+                <div class="decorative-line"></div>
+
+                <div class="family-names">
+                    <strong>Daughter of</strong><br>
+                    Salandri Niranjan Yadav & Sandhya
+                </div>
+
+                <div class="events-section">
+                    <div class="event-title">Wedding Events</div>
+                    
+                    <div class="event-item">
+                        <div class="event-name">
+                            Wedding Ceremony
+                        </div>
+                        <div class="event-content">
+                            <div class="event-details">
+                                <div class="event-time">Sunday, 26th October 2025</div>
+                                <div class="event-time">11:20 AM onwards</div>
+                                <div style="margin-top: 8px; font-style: italic;">
+                                    Muhurat Time: 11:20 AM
+                                </div>
+                            </div>
+                            
+                            <div class="event-venue">
+                                <strong>📍 Venue</strong>
+                                Manda Narsimha Reddy Gardens<br>
+                                Champapet, Sagar Road<br>
+                                Hyderabad
+                                
+                                <div style="text-align: center;">
+                                    <a href="https://maps.google.com/maps?cid=7514581052092724568" target="_blank" class="directions-btn">
+                                        Get Directions 🗺️
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-name">
+                            Reception Ceremony
+                        </div>
+                        <div class="event-content">
+                            <div class="event-details">
+                                <div class="event-time">Tuesday, 28th October 2025</div>
+                                <div class="event-time">8:00 PM onwards</div>
+                                <div style="margin-top: 8px; font-style: italic;">
+                                    Dinner & Celebrations
+                                </div>
+                            </div>
+                            
+                            <div class="event-venue">
+                                <strong>📍 Venue</strong>
+                                Green House Function Hall<br>
+                                Konijeti Enclave<br>
+                                Behind Vegetable Market, Pillar No:83<br>
+                                Mehdipatnam Ring Road, Hyderabad
+                                
+                                <div style="text-align: center;">
+                                    <a href="https://maps.app.goo.gl/qSDcVZcUpkhCEBvU6" target="_blank" class="directions-btn">
+                                        Get Directions 🗺️
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blessings-from">
+                    <strong>With Blessings From</strong>
+                    <div class="blessing-names">
+                        Yashoda Karola, Shanker Karola, Narender Karola,<br>
+                        Narsing Rao Kondapuram,<br>
+                        Near & Dear
+                    </div>
+                </div>
+
+                <div class="blessing-text">
+                    Your presence will make our day<br>
+                    more special. We seek your<br>
+                    gracious presence and blessings as we<br>
+                    begin this beautiful journey of<br>
+                    love and togetherness.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('gesturechange', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('gestureend', function (e) {
+            e.preventDefault();
+        });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        document.addEventListener('touchmove', function (event) {
+            if (event.scale !== 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>
